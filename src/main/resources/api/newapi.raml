@@ -1,0 +1,38 @@
+#%RAML 1.0
+version: 1
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/98a4d970-c75f-4023-9df3-df3f71786742/ # 
+title: newapi
+
+/unitedflights:
+ get:
+   queryParameters:
+     destination: 
+       required: true
+       maxLength: 3
+       minLength: 3
+   responses:
+     200:
+       body:
+         application/json:
+           example:
+               "flights": [{
+                    "code": "ER38sd",
+                    "price": 400,
+                    "origin": "MUA",
+                    "destination": "SFO",
+                    "departureDate": "2015/03/20",
+                    "planeType": "Boeing 737",
+                    "airlineName": "United",
+                    "emptySeats": 0
+                  }, {
+                    "code": "ER39rk",
+                    "price": 945,
+                    "origin": "MUA",
+                    "destination": "SFO",
+                    "departureDate": "2015/09/11",
+                    "planeType": "Boeing 757",
+                    "airlineName": "United",
+                    "emptySeats": 54
+                  }]
+             
+      
